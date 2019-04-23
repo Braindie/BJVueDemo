@@ -1,24 +1,34 @@
 <template>
-    <bj-tabbar class="mytabbar"></bj-tabbar>
+    <base-layout :class="classes">
+        <bj-tabbar class="h-footer"></bj-tabbar>
+    </base-layout>
 </template>
   
 
 <script>
+
+const prefixCls = 'hm-index';
+
 export default {
-    name: 'hello',
+    name: prefixCls,
     data() {
         return {
+            prefixCls: prefixCls,
 
         }
     },
-    methods:{
-    }
+    computed: {
+      classes() {
+        return [
+          `${this.prefixCls}`
+        ];
+      }
+    },
 }
 </script>
 
 
 <style>
-    .mytabbar{
-        background-color: aqua
-    }
+
+
 </style>

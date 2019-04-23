@@ -4,13 +4,20 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+//引入组件
 import './global';
 
-//自定义全局组件
-import Tabbar from './components/tabbar'//这个应该是路由路径
+//引入样式
+import './styles/index.scss';
+
+//自定义全局组件（import 导入后的变量名 from 加载路径）
+import Tabbar from './components/tabbar';//这个应该是路由路径
+import BaseLayout from './components/base-layout';//这个应该是路由路径
 
 Vue.use(Tabbar);
+Vue.use(BaseLayout);
 
+//root不在作为根组件，作为容器，加载三方组件（App.vue才是跟组件）
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

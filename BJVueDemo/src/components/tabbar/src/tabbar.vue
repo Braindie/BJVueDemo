@@ -1,11 +1,9 @@
 <template>
   <tabbar v-model="index" @on-index-change="indexChange" class="bj-tabbar">
     <tabbar-item link="/">
-      <i slot="icon" class="ku-icon" :class="index === 0 ? 'community_red' : 'community_gray'"></i>
       <span slot="label">首页</span>
     </tabbar-item>
-    <tabbar-item link="/home/index">
-      <i slot="icon" class="ku-icon" :class="index === 1 ? 'mine_red' : 'mine_gray'"></i>
+    <tabbar-item link="/mine/">
       <span slot="label">我的</span>
     </tabbar-item>
   </tabbar>
@@ -33,6 +31,7 @@ export default {
     },
     methods: {
         indexChange(index){
+            console.log(index);
             this.index = index;
         }
     },

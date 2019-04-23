@@ -1,5 +1,7 @@
 <template>
-  <div id="app">
+  <div class="wrapper">
+    <!-- <router-view/> -->
+
     <view-box>
       <transition>
         <router-view/>
@@ -10,26 +12,18 @@
 
 <script>
 export default {
-  name: 'App',
-  head: {
-    title:'hello'
-  },
+  name: 'app'
 }
 </script>
 
-<style>
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
-  /* @import '~vux/src/styles/reset.less';
-  @import '~vux/src/styles/1px.less'; */
+<style lang="less" scoped>
+// scoped限制只在本组件使用
 
-  .app {
+  //全局样式
+  @import '~vux/src/styles/reset.less';
+  @import '~vux/src/styles/1px.less';
+
+  .wrapper {
     height: 100%;
   }
 </style>
