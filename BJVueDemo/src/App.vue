@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <transition>
-      <router-view/>
-    </transition>
+    <view-box>
+      <transition>
+        <router-view/>
+      </transition>
+    </view-box>
   </div>
 </template>
 
@@ -16,12 +18,18 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
+} */
+  /* @import '~vux/src/styles/reset.less';
+  @import '~vux/src/styles/1px.less'; */
+
+  .app {
+    height: 100%;
+  }
 </style>

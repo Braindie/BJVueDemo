@@ -1,8 +1,6 @@
 <template>
     <div>
-        <fieldset disabled="disabled">
-            <legend>添加用户信息</legend>
-        </fieldset>
+        hello
     </div>
     
 </template>

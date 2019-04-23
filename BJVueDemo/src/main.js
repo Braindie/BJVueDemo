@@ -4,6 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import './global';
+
+//自定义全局组件
+import Tabbar from './components/tabbar'//这个应该是路由路径
+
+Vue.use(Tabbar);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
