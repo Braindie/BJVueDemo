@@ -13,7 +13,7 @@
       <slot name="footer"></slot>
     </footer>
     <!-- 其他 -->
-    <slot></slot>
+    <!-- <slot></slot> -->
   </div>
 </template>
 
@@ -33,12 +33,13 @@
 
 <style lang="scss">
   .base-layout {
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
+    // position: fixed;
+    // top: 0;
+    // left: 0;
     position: relative;
     height: 100%;
     width: 100%;
+    // background-color: red;
 
     > header {
       position: absolute !important;

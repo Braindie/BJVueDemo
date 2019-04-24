@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// import mine_router from './mine/index'
-
 const index = () => import('../pages/index.vue').then(m => m.default || m);
 const mine = () => import('../pages/mine/index.vue').then(m => m.default || m);
 

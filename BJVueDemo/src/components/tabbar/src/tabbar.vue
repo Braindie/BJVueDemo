@@ -30,17 +30,49 @@ export default {
         }
     },
     methods: {
-        indexChange(index){
-            console.log(index);
+        indexChange(index) {
+            console.log('点击了'+index);
             this.index = index;
         }
     },
-    created(){
+    created() {
+        // console.log('生命周期');
         this.index = this.defaultIndex || 0;
     }
 }
 </script>
 
-<style>
+<style lang="scss">
+//   @import "@/styles/common/var.scss";
 
+//   .bj-tabbar {
+//     height: 85px;
+
+//     .weui-tabbar__label {
+//       margin-top: 5px;
+//     }
+
+//     .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon,
+//     .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon > i,
+//     .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label {
+//       color: $primary;
+//     }
+
+//     .weui-tabbar__item {
+//       padding-top: 10px;
+
+//       .weui-tabbar__icon {
+//         width: 36px;
+//         height: 36px;
+
+//         i {
+//           font-size: 36px;
+//         }
+//       }
+
+//       .weui-tabbar__label {
+//         font-size: 18px;
+//       }
+//     }
+//   }
 </style>

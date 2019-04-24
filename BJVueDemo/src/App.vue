@@ -1,12 +1,11 @@
 <template>
   <div class="wrapper">
-    <!-- <router-view/> -->
-
-    <view-box>
-      <transition>
-        <router-view/>
+    <!-- <view-box> -->
+      <!-- 过渡效果 -->
+      <transition name="fade1" mode="out-in">
+        <router-view></router-view>
       </transition>
-    </view-box>
+    <!-- </view-box> -->
   </div>
 </template>
 
