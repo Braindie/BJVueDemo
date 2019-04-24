@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
 //引入组件
 import './global';
 
@@ -18,6 +21,7 @@ import BaseLayout from './components/base-layout';//这个应该是路由路径
 Vue.use(Tabbar);
 Vue.use(BaseLayout);
 // Vue.use(Header);
+Vue.use(ElementUI);
 
 //root不在作为根组件，作为容器，加载三方组件（App.vue才是跟组件）
 Vue.config.productionTip = false

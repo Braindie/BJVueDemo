@@ -2,6 +2,9 @@
     <base-layout class="home-container">
         <template slot="main">
             <x-header :left-options="{showBack: false}" class="navbar">首页</x-header>
+            <el-button>默认按钮</el-button>
+            <el-input v-model="input" placeholder="请输入内容"></el-input>
+
             <bj-tabbar class="h-footer"></bj-tabbar>
         </template>
     </base-layout>
@@ -18,7 +21,7 @@ export default {
     data() {
         return {
             prefixCls: prefixCls,
-
+            input: ''
         }
     },
     components: {
