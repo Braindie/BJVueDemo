@@ -3,6 +3,7 @@
     <!-- <view-box> -->
       <!-- 过渡效果 -->
       <transition name="fade1" mode="out-in">
+        <!-- 第一个router-view -->
         <router-view></router-view>
       </transition>
     <!-- </view-box> -->
