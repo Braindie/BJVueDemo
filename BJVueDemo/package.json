@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "element-ui": "^2.7.2",
+    "lib-flexible": "^0.3.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vux": "^2.9.4"
@@ -42,6 +43,7 @@
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
+    "px2rem-loader": "^0.1.9",
     "rimraf": "^2.6.0",
     "sass": "^1.19.0",
     "sass-loader": "^7.1.0",

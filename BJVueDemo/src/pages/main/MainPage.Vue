@@ -1,22 +1,30 @@
 <template>
-    <div>
-        <x-header :left-options="{showBack: false}" class="navbar">
-            首页
-            <router-link to="/login" tag="a" slot="right" style="color: white" link="/mine/index">登录</router-link>
-        </x-header>
-        <div class="content">
-            <div v-for="(title, index) in titles" :key="index">
-                <!-- 父组件向子组件传值 -->
-                <mine-list-item :title=title></mine-list-item>
+    <base-layout :class="classes">
+        <!-- 导航栏 -->
+        <template slot="header">
+            <hm-header :preventGoBack="true" title="首页"></hm-header>
+        </template>
+
+        <template slot="main">
+            <!-- 产品列表 -->
+            <div class="content">
+                <div v-for="(title, index) in titles" :key="index">
+                    <!-- 父组件向子组件传值 -->
+                    <mine-list-item :title=title></mine-list-item>
+                </div>
             </div>
-        </div>
-        <bj-tabbar class="h-footer"></bj-tabbar>
-    </div>
+        </template>
+
+        <!-- 标签栏 -->
+        <template slot="footer">
+            <bj-tabbar class="h-footer"></bj-tabbar>
+        </template>
+    </base-layout>
 </template>
   
 
 <script>
-import { XHeader, Tabbar, TabbarItem } from 'vux'
+
 import MineListItem from "./mainListItem/MainListItem"
 
 const prefixCls = 'hm-index';
@@ -31,9 +39,6 @@ export default {
         }
     },
     components: {
-        XHeader,
-        Tabbar,
-        TabbarItem,
         MineListItem
     },
     computed: {
@@ -45,28 +50,14 @@ export default {
     },
     methods: {
         onIndexChange (newIndex, oldIndex) {
-        console.log(newIndex, oldIndex)
+            console.log(newIndex, oldIndex)
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-    .home-container {
-        background-color: purple;
-    }
-    .navbar {
-        background-color: orange;
-    }
-    .content{
-        background-color: white;
-        position: absolute;
-        top: 46px;
-        bottom: 53px;
-        overflow-y: auto;
-        width: 100%;
-    }
-    
+
 
 </style>
 

@@ -13,7 +13,7 @@
       <slot name="footer"></slot>
     </footer>
     <!-- 其他 -->
-    <!-- <slot></slot> -->
+    <slot></slot>
   </div>
 </template>
 

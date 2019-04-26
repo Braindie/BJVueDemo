@@ -1,0 +1,100 @@
+@import "./common/var";
+
+.hm-tab {
+  &.vux-tab-wrap {
+    position: relative;
+    padding-top: 50px;
+  }
+
+  .vux-tab .vux-tab-item.vux-tab-selected {
+    color: $primary;
+    border-bottom: 3px solid $primary;
+  }
+
+  .vux-tab-ink-bar {
+    background-color: $primary;
+  }
+
+  .vux-tab-container,
+  .vux-tab {
+    height: 50px;
+  }
+
+  .vux-tab .vux-tab-item {
+    line-height: 50px;
+    font-size: 18px;
+  }
+}
+
+.hm-inputs {
+  .weui-cells {
+    margin-top: 0;
+
+    .weui-cell {
+      padding: 20px;
+      line-height: 40px;
+
+      .weui-cell__hd {
+        width: 145px;
+
+        .weui-label {
+          font-size: 20px; /* px */
+          color: #333;
+        }
+      }
+
+      .weui-input {
+        font-size: 20px; /* px */
+      }
+
+      .weui-cell__ft {
+        .weui_icon_warn {
+          display: none;
+        }
+      }
+
+      &::before {
+        left: 0;
+        border-top: 2Px solid #e1e1e1;
+        color: #e1e1e1;
+      }
+    }
+
+    &::before,
+    &::after {
+      border-top: 2Px solid #e1e1e1;
+    }
+  }
+}
+
+.v-transfer-dom.vux-popover {
+  color: #333;
+  max-width: 170px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 50001;
+
+  .vux-popover-arrow {
+    top: -16px;
+    border-bottom: 18px solid #fff;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+  }
+}
+
+#vux_view_box_body {
+  padding: 0;
+}
+
+.vux-popup-dialog {
+  .vux-popup-header {
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+  }
+}
+
+.weui-mask {
+  z-index: 1001;
+}
