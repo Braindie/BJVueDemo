@@ -2,16 +2,14 @@
     <base-layout :class="classes">
         <!-- 导航栏 -->
         <template slot="header">
-            <hm-header :preventGoBack="true" title="首页"></hm-header>
+            <hm-header :preventGoBack="true" title="首页" rightTitle="登录" :hasRight="true" :hasLeft="false"></hm-header>
         </template>
 
         <template slot="main">
             <!-- 产品列表 -->
-            <div class="content">
-                <div v-for="(title, index) in titles" :key="index">
-                    <!-- 父组件向子组件传值 -->
-                    <mine-list-item :title=title></mine-list-item>
-                </div>
+            <div v-for="(title, index) in titles" :key="index">
+                <!-- 父组件向子组件传值 -->
+                <mine-list-item :title='title'></mine-list-item>
             </div>
         </template>
 
@@ -27,7 +25,7 @@
 
 import MineListItem from "./mainListItem/MainListItem"
 
-const prefixCls = 'hm-index';
+const prefixCls = 'bj-main';
 
 export default {
     name: prefixCls,
@@ -57,7 +55,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    .bj-index {
+        box-sizing: border-box;
+        padding-top: 95px;
+        padding-bottom: 85px;
+        background-color: white;
+    }
 
 </style>
 

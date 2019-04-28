@@ -1,13 +1,11 @@
 <template>
-  <tabbar v-model="tabbarIndex" style="position: fixed">
-    <tabbar-item @on-item-click="gotoTabbarPage(0)">
-        <!-- <img slot="icon" src="../../../assets/community_gray.png">
-        <img slot="icon-active" src="../../../assets/community_red.png"> -->
+  <tabbar v-model="index" @on-index-change="indexChange" class="bj-tabbar">
+    <tabbar-item link="/">
+        <i slot="icon" class="ku-icon" :class="index === 0 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
         <span slot="label">首页</span>
     </tabbar-item>
-    <tabbar-item @on-item-click="gotoTabbarPage(1)">
-        <!-- <img slot="icon" src="../../../assets/mine_gray.png">
-        <img slot="icon-active" src="../../../assets/mine_red.png"> -->
+    <tabbar-item link="/minePage">
+        <i slot="icon" class="ku-icon" :class="index === 2 ? 'icon-tab_profile_select' : 'icon-tab_profile_regular'"></i>
         <span slot="label">我的</span>
     </tabbar-item>
   </tabbar>
@@ -19,7 +17,10 @@ import { Tabbar, TabbarItem } from 'vux';
 export default {
     name: 'bj-tabbar',
     props: {
-
+        defaultIndex: {
+            type: Number,
+            default: 0
+        }
     },
     components: {
         Tabbar,
@@ -27,22 +28,53 @@ export default {
     },
     data() {
         return {
-            tabbarIndex: 0
+            index: 0
         }
     },
     methods: {
-        gotoTabbarPage (tabbarIndex) {
-            if (tabbarIndex == 0) {
-                this.$router.push({path:'/'});
-            }else{
-                this.$router.push({path:'/minePage'})
-            }
-            console.log(tabbarIndex);
-        }
+        indexChange(index) {
+            this.index = index;
+        },
+    },
+    create() {
+        this.index = this.defaultIndex || 0;
     }
 }
 </script>
 
-<style lang="scss">
 
+<style lang="scss">
+  @import "@/styles/common/var.scss";
+
+  .bj-tabbar {
+    height: 85px;
+
+    .weui-tabbar__label {
+      margin-top: 5px;
+    }
+
+    .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon,
+    .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon > i,
+    .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label {
+      color: $primary;
+    }
+
+    .weui-tabbar__item {
+      padding-top: 10px;
+
+      .weui-tabbar__icon {
+        width: 36px;
+        height: 36px;
+
+        i {
+          font-size: 36px;
+        }
+      }
+
+      .weui-tabbar__label {
+        font-size: 18px;
+      }
+    }
+  }
 </style>
+

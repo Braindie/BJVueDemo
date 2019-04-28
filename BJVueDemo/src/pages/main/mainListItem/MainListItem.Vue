@@ -19,7 +19,7 @@ export default {
 
 <style>
     .film-item{
-        background-color: orange;
+        background-color: lightgray;
         margin-top: 20px;
         margin-left: 20px;
         margin-right: 20px;
@@ -32,7 +32,7 @@ export default {
 
     .item-detial{
         text-align: center;
-        background-color: rgb(240, 230, 88);
+        background-color: lightskyblue;
         height: 80px;
         margin: 20px;
     }

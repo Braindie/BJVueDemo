@@ -1,10 +1,13 @@
 <template>
     <div class="hm-header">
         <x-header :left-options="{ backText:'', preventGoBack: preventGoBack}" @on-click-back="hanldeClickBack">
-            <div :slot="`left`">
-                <i class="ku-icon icon-left"></i>
+            <div :slot="`left`" v-if="hasLeft">
+              <i class="ku-icon icon-left"></i>
             </div>
             {{ title }}
+            <div slot="right" v-if="hasRight" @click="rightAction">
+              {{ rightTitle }}
+            </div>
         </x-header>
         <div class="zhan-wei"></div>
     </div>
@@ -19,11 +22,21 @@ export default {
             type: String,
             default: ''
         },
+        rightTitle: {
+            type: String,
+            default: ''
+        },
         preventGoBack: {
             type: Boolean,
-            default() {
-                return false
-            }
+            default: false
+        },
+        hasRight: {
+            type: Boolean,
+            default: false
+        },
+        hasLeft: {
+            type: Boolean,
+            default: true
         },
     },
     data() {
@@ -33,7 +46,10 @@ export default {
     },
     methods: {
         hanldeClickBack() {
-            this.$emit('handleClickBack')
+          this.$emit('handleClickBack')
+        },
+        rightAction() {
+          this.$router.push({path:'/login'})
         }
     },
 }

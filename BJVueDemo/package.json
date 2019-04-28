@@ -12,6 +12,7 @@
   "dependencies": {
     "element-ui": "^2.7.2",
     "lib-flexible": "^0.3.2",
+    "postcss-plugin-px2rem": "^0.8.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vux": "^2.9.4"

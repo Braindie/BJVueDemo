@@ -1,7 +1,10 @@
 <template>
-    <base-layout class="mine-container">
-        <template slot="main">
-            <x-header :left-options="{showBack: false}" class="navbar">我的</x-header>
+    <base-layout :class="classes">
+        <template slot="header">
+            <hm-header :preventGoBack="true" title="我的" :hasRight=false :hasLeft=false></hm-header>
+        </template>
+
+        <template slot="footer">
             <bj-tabbar class="h-footer"></bj-tabbar>
         </template>
     </base-layout>
@@ -10,7 +13,7 @@
 <script>
 import { XHeader } from 'vux'
 
-const prefixCls = 'hm-index';
+const prefixCls = 'bj-mine';
 
 export default {
     name: prefixCls,

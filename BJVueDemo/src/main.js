@@ -7,6 +7,7 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+import '@/assets/fonts/iconfont.css';
 
 //引入组件
 import './global';
@@ -15,7 +16,8 @@ import './global';
 import './styles/index.scss';
 
 // 引入淘宝自适应插件
-import 'lib-flexible/flexible';
+// import 'lib-flexible/flexible';
+import  'lib-flexible';
 
 
 //自定义全局组件（import 导入后的变量名 from 加载路径）
