@@ -7,10 +7,12 @@
         <template slot="main">
             <group :class="[`${prefixCls}-group`]">
                 <x-input v-model="mobile" type="text" :max="13" placeholder="手机号"></x-input>
-                <x-input v-model="password" :type="type" placeholder="8-16位数字和字母组合">
-
-                </x-input>
+                <x-input v-model="password" :type="type" placeholder="8-16位数字和字母组合"></x-input>
             </group>
+
+            <div :class="[`${prefixCls}-button`]">
+                <x-button :gradients="['#1D62F0', '#19D5FD']" @click.native="handleLogin">登录</x-button>
+            </div>
         </template>
     </base-layout>
 </template>
@@ -41,7 +43,7 @@ export default {
     },
     methods: {
         handleLogin(){
-            console.log("登录");
+            console.log("登录"+this.mobile+this.password);
         }
     },
 }
@@ -55,28 +57,29 @@ export default {
         &-group {
             background-color: orange;
             font-size: 28px;
-            padding-top: 50px;
-            margin: 50px 90px 50px 90px;
+            margin: 90px;
 
-            // .weui-cells {
-            //     margin-top: 0;
 
-            //     .weui-cell {
-            //         padding: 20px 23px 20px 0;
-            //         margin-top: 55px;
+            .weui-cells {
+                margin-top: 0;
 
-            //         .weui-cell__ft {
-            //             .vux-x-input-right-full {
-            //                 width: 140px;
-            //                 height: 62px;
-            //             }
-            //         }
-            //     }
+                .weui-cell {
+                    height: 90px;
+                }
 
-            //     .weui-input {
-            //         font-size: 28px;
-            //     }
-            // }
+                .weui-input {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        &-button {
+            width: 480px;
+            margin: 40px auto 0;
+
+            .weui-btn {
+                font-size: 34px;
+            }
         }
     }
 </style>
