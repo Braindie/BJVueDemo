@@ -3,10 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store';
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 
+
+//引入矢量图标
 import '@/assets/fonts/iconfont.css';
 
 //引入组件
@@ -15,10 +16,16 @@ import './global';
 //引入全局样式
 import './styles/index.scss';
 
-// 引入淘宝自适应插件
-// import 'lib-flexible/flexible';
+//引入淘宝自适应插件
 import  'lib-flexible';
 
+import axios from 'axios'
+
+
+
+//引入ElementUI
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 //自定义全局组件（import 导入后的变量名 from 加载路径）
 import Tabbar from './components/tabbar';//这个应该是路由路径
@@ -31,6 +38,7 @@ Vue.use(Header);
 
 Vue.use(ElementUI);
 
+
 //root不在作为根组件，作为容器，加载三方组件（App.vue才是跟组件）
 Vue.config.productionTip = false
 
@@ -38,6 +46,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

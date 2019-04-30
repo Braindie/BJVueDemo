@@ -19,12 +19,13 @@
 
 
 <script>
-import { XHeader } from 'vux'
+import { measure } from './../../mixin/CommonMeasure';
 
 const prefixCls = 'bj-login';
 
 export default {
     name: prefixCls,
+    mixins: [measure],
     data() {
         return {
             prefixCls,
@@ -39,11 +40,17 @@ export default {
         },
     },
     components: {
-        XHeader
     },
     methods: {
         handleLogin(){
-            console.log("登录"+this.mobile+this.password);
+            if (this.mobile === '') {
+                this.toast({ text: '请输入正确的手机号或用户名'});
+                return;
+            }
+            if (this.password === '') {
+                this.toast({ text: '密码错误'});
+                return;
+            }
         }
     },
 }
