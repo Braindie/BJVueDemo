@@ -1,6 +1,12 @@
 import Vue from 'vue';
 
 import {
+    $ajax,
+} from '@/plugins';
+
+Vue.prototype.$ajax = $ajax;
+
+import {
     ViewBox,
     XHeader,
     Group,

@@ -6,31 +6,13 @@ const user = {
         LoginByPassword({ commit }) {
             return new Promise((resolve, reject) => {
 
-                // fetch('https://api.coindesk.com/v1/bpi/currentprice.json', {
-                //     method: 'GET'
-                // }).then((value) => {
-                //     console.log(value);
-    
-                //     return value.text()
-                    
-                // }).then((res) => {
-                //     console.log(res);
-                //     // console.log(typeof(res))
-                //     // console.log(JSON.parse(res))
-                // })
-
                 fetchLoginByPwd()
-                .then((value) => {
-                    console.log(value);
-    
-                    return value.text()
-                    
-                }).then((res) => {
-                    console.log(res);
-                    resolve(res);
-                    // console.log(typeof(res))
-                    // console.log(JSON.parse(res))
-                })
+                .then(data => {
+                    resolve(data);
+                  })
+                  .catch(error => {
+                    reject(error);
+                  });
             });
         }
     }    

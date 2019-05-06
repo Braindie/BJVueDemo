@@ -5,8 +5,10 @@
         </template>
 
         <template slot="main">
-            <x-button :class="[`${prefixCls}-button`]" :gradients="['#1D62F0', '#19D5FD']" @click.native="handleLogin">请求</x-button>
-            {{ info }}
+            <x-button :class="[`${prefixCls}-button1`]" :gradients="['#1D62F0', '#19D5FD']" @click.native="handleLogin1">网络请求1</x-button>
+            {{ info1 }}
+            <x-button :class="[`${prefixCls}-button2`]" :gradients="['#1D62F0', '#19D5FD']" @click.native="handleLogin2">网络请求2</x-button>
+            {{ info2 }}
         </template>
 
         <template slot="footer">
@@ -25,74 +27,30 @@ export default {
     data() {
         return {
             prefixCls: prefixCls,
-            info: "",
+            info1: "",
+            info2: "",
             loading: true,
             errored: false
         }
     },
     methods: {
-        handleLogin() {
-          console.log('网络请求');  
-
-            // this.$axios({
-            //     method:'post',
-            //     url:'http://v.juhe.cn/toutiao/index/',
-            //     data:({
-            //         key:"c76f60c92d392d0a59d7cac0cae97a44"
-            //     })
-            // }).then((response) =>{          //这里使用了ES6的语法
-            //     console.log(response)       //请求成功返回的数据
-            // }).catch((error) =>{
-            //     console.log(error)       //请求失败返回的数据
-            // })
-
-            // axios.get('http://v.juhe.cn/toutiao/index?key=c76f60c92d392d0a59d7cac0cae97a44')
-            //     .then(response => {
-            //         this.info = response.data.bpi
-            //     })
-            //     .catch(error => {
-            //         console.log(error)
-            //         this.errored = true
-            //     })
-            //     .finally(() => this.loading = false);
-
-            // axios.post('http://v.juhe.cn/toutiao/index/',{
-            //     key:'c76f60c92d392d0a59d7cac0cae97a44'
-            // })
-            // .then(function (response) {
-            //     console.log(response);
-            //     this.info = response;
-            // })
-// https://api.coindesk.com/v1/bpi/currentprice.json
-            // axios.get('http://v.juhe.cn/toutiao/index?key=c76f60c92d392d0a59d7cac0cae97a44')
-            // .then(function (response) {
-            //     console.log(response);
-            //     this.info = response;
-            // })
-
-
-            // fetch('https://api.coindesk.com/v1/bpi/currentprice.json', {
-            //     method: 'GET'
-            // }).then((value) => {
-            //     console.log(value);
-
-            //     return value.text()
-                
-            // }).then((res) => {
-            //     console.log(res);
-            //     // console.log(typeof(res))
-            //     // console.log(JSON.parse(res))
-            // })
-
+        handleLogin1() {
+          console.log('网络请求1');  
             this.$store.dispatch('LoginByPassword')//状态管理模式
                 .then(data => {
+                    console.log('文件名为fetch的axio请求');
                     console.log(data);
-                    this.info = data;
+                    this.info1 = data.data;
                 })
-                .catch(() => {
-
+        },
+        handleLogin2() {
+          console.log('网络请求2');  
+            this.$ajax.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+                .then(data => {
+                    console.log('文件名为ajax的axio请求');
+                    console.log(data);
+                    this.info2 = data.data;
                 })
-
         }
     },
     computed: {
@@ -107,10 +65,20 @@ export default {
 
 <style lang="scss" scoped>
     .bj-mine {
+        box-sizing: border-box;
         padding-top: 95px;
         background-color: white;
+        padding-bottom: 85px;
 
-        &-button {
+        &-button1 {
+            width: 480px;
+            margin: 40px auto 0;
+
+            .weui-btn {
+                font-size: 34px;
+            }
+        }
+        &-button2 {
             width: 480px;
             margin: 40px auto 0;
 
