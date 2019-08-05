@@ -4,7 +4,7 @@
             <span>{{ title }}</span>
         </div>
         <div v-for="item in 3" :key="item" class="item-detial">
-            详情
+            这是详细内容
         </div>
     </div>
 </template>
