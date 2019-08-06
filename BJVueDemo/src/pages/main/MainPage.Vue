@@ -2,7 +2,7 @@
     <base-layout :class="classes">
         <!-- 导航栏 -->
         <template slot="header">
-            <hm-header :preventGoBack="true" title="首页" rightTitle="登录" :hasRight="true" :hasLeft="false"></hm-header>
+            <hm-header :preventGoBack="true" title="布局" rightTitle="登录" :hasRight="true" :hasLeft="false"></hm-header>
         </template>
 
         <template slot="main">

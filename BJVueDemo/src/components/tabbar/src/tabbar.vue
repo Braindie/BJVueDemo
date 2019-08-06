@@ -1,12 +1,24 @@
 <template>
   <tabbar v-model="index" @on-index-change="indexChange" class="bj-tabbar">
     <tabbar-item link="/">
-        <i slot="icon" class="ku-icon" :class="index === 0 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
-        <span slot="label">首页</span>
+      <i slot="icon" class="ku-icon" :class="index === 0 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+      <span slot="label">布局</span>
+    </tabbar-item>
+    <tabbar-item link="/animationPage">
+      <i slot="icon" class="ku-icon" :class="index === 2 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+      <span slot="label">动画</span>
+    </tabbar-item>
+    <tabbar-item link="/networkPage">
+      <i slot="icon" class="ku-icon" :class="index === 3 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+      <span slot="label">网络</span>
+    </tabbar-item>
+    <tabbar-item link="/framePage">
+      <i slot="icon" class="ku-icon" :class="index === 4 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+      <span slot="label">架构</span>
     </tabbar-item>
     <tabbar-item link="/minePage">
-        <i slot="icon" class="ku-icon" :class="index === 2 ? 'icon-tab_profile_select' : 'icon-tab_profile_regular'"></i>
-        <span slot="label">我的</span>
+      <i slot="icon" class="ku-icon" :class="index === 5 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+      <span slot="label">功能</span>
     </tabbar-item>
   </tabbar>
 </template>
@@ -15,30 +27,30 @@
 import { Tabbar, TabbarItem } from 'vux';
 
 export default {
-    name: 'bj-tabbar',
-    props: {
-        defaultIndex: {
-            type: Number,
-            default: 0
-        }
-    },
-    components: {
-        Tabbar,
-        TabbarItem
-    },
-    data() {
-        return {
-            index: 0
-        }
-    },
-    methods: {
-        indexChange(index) {
-            this.index = index;
-        },
-    },
-    create() {
-        this.index = this.defaultIndex || 0;
+  name: 'bj-tabbar',
+  props: {
+    defaultIndex: {
+      type: Number,
+      default: 0
     }
+  },
+  components: {
+    Tabbar,
+    TabbarItem
+  },
+  data() {
+    return {
+      index: 0
+    }
+  },
+  methods: {
+    indexChange(index) {
+      this.index = index;
+    },
+  },
+  create() {
+    this.index = this.defaultIndex || 0;
+  }
 }
 </script>
 
