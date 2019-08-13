@@ -14,7 +14,7 @@ export default new Router({
   routes: [
     {
       path:'',
-      name:'index',
+      name:'main',
       component:MainPage,
       meta:{
         title:'布局'

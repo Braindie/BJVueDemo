@@ -15,7 +15,7 @@
 
         <!-- 标签栏 -->
         <template slot="footer">
-            <bj-tabbar class="h-footer"></bj-tabbar>
+            <bj-tabbar :default-index="0" class="h-footer"></bj-tabbar>
         </template>
     </base-layout>
 </template>

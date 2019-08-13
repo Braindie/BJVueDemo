@@ -1,58 +1,60 @@
 <template>
-    <div class="hm-header">
-        <x-header :left-options="{ backText:'', preventGoBack: preventGoBack}" @on-click-back="hanldeClickBack">
-            <div :slot="`left`" v-if="hasLeft">
-              <i class="ku-icon icon-left"></i>
-            </div>
-            {{ title }}
-            <div slot="right" v-if="hasRight" @click="rightAction">
-              {{ rightTitle }}
-            </div>
-        </x-header>
-        <div class="zhan-wei"></div>
-    </div>
+  <div class="hm-header">
+    <x-header :left-options="{ backText:'', preventGoBack: preventGoBack}" @on-click-back="hanldeClickBack">
+      <div :slot="`left`" v-if="hasLeft">
+        <i class="ku-icon icon-left"></i>
+      </div>
+      {{ title }}
+      <div slot="right" v-if="hasRight" @click="rightAction">
+        {{ rightTitle }}
+      </div>
+    </x-header>
+    <div class="zhan-wei"></div>
+  </div>
 </template>
 
 <script>
-
-export default {
+  export default {
     name: 'hm-header',
     props: {
-        title: {
-            type: String,
-            default: ''
-        },
-        rightTitle: {
-            type: String,
-            default: ''
-        },
-        preventGoBack: {
-            type: Boolean,
-            default: false
-        },
-        hasRight: {
-            type: Boolean,
-            default: false
-        },
-        hasLeft: {
-            type: Boolean,
-            default: true
-        },
+      title: {
+        type: String,
+        default: ''
+      },
+      rightTitle: {
+        type: String,
+        default: ''
+      },
+      preventGoBack: {
+        type: Boolean,
+        default: false
+      },
+      hasRight: {
+        type: Boolean,
+        default: false
+      },
+      hasLeft: {
+        type: Boolean,
+        default: true
+      },
     },
     data() {
-        return {
-            
-        }
+      return {
+          
+      }
     },
     methods: {
-        hanldeClickBack() {
-          this.$emit('handleClickBack')
-        },
-        rightAction() {
-          this.$router.push({path:'/login'})
-        }
+      hanldeClickBack() {
+        this.$emit('handleClickBack')
+      },
+      rightAction() {
+        this.$router.push({path:'/login'})
+      }
     },
-}
+    created() {
+      console.log('header');
+    }
+  }
 </script>
 
 <style lang="scss">

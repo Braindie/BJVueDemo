@@ -1,26 +1,28 @@
 <template>
-  <tabbar v-model="index" @on-index-change="indexChange" class="bj-tabbar">
-    <tabbar-item link="/">
-      <i slot="icon" class="ku-icon" :class="index === 0 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
-      <span slot="label">布局</span>
-    </tabbar-item>
-    <tabbar-item link="/animationPage">
-      <i slot="icon" class="ku-icon" :class="index === 2 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
-      <span slot="label">动画</span>
-    </tabbar-item>
-    <tabbar-item link="/networkPage">
-      <i slot="icon" class="ku-icon" :class="index === 3 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
-      <span slot="label">网络</span>
-    </tabbar-item>
-    <tabbar-item link="/framePage">
-      <i slot="icon" class="ku-icon" :class="index === 4 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
-      <span slot="label">架构</span>
-    </tabbar-item>
-    <tabbar-item link="/minePage">
-      <i slot="icon" class="ku-icon" :class="index === 5 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
-      <span slot="label">功能</span>
-    </tabbar-item>
-  </tabbar>
+  <div class="bj-tabbar">
+    <tabbar v-model="index" @on-index-change="indexChange">
+      <tabbar-item link="/">
+        <i slot="icon" class="ku-icon" :class="index === 0 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <span slot="label">布局</span>
+      </tabbar-item>
+      <tabbar-item link="/animationPage">
+        <i slot="icon" class="ku-icon" :class="index === 2 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <span slot="label">动画</span>
+      </tabbar-item>
+      <tabbar-item link="/networkPage">
+        <i slot="icon" class="ku-icon" :class="index === 3 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <span slot="label">网络</span>
+      </tabbar-item>
+      <tabbar-item link="/framePage">
+        <i slot="icon" class="ku-icon" :class="index === 4 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <span slot="label">架构</span>
+      </tabbar-item>
+      <tabbar-item link="/minePage">
+        <i slot="icon" class="ku-icon" :class="index === 5 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <span slot="label">功能</span>
+      </tabbar-item>
+    </tabbar>
+  </div>
 </template>
 
 <script>
@@ -45,12 +47,19 @@ export default {
   },
   methods: {
     indexChange(index) {
+      console.log('change' + index);
       this.index = index;
     },
   },
   create() {
+    console.log(this.index);
     this.index = this.defaultIndex || 0;
-  }
+  },
+  watch:{
+    $route(to,from){
+      console.log('路由变化');
+    }
+  },
 }
 </script>
 

@@ -12,7 +12,7 @@
     </template>
 
     <template slot="footer">
-      <bj-tabbar class="h-footer"></bj-tabbar>
+      <bj-tabbar :default-index="2" class="h-footer"></bj-tabbar>
     </template>
   </base-layout>
 </template>
@@ -23,42 +23,42 @@ import axios from 'axios'
 const prefixCls = 'bj-network';
 
 export default {
-    name: prefixCls,
-    data() {
-      return {
-        prefixCls: prefixCls,
-        info1: "",
-        info2: "",
-        loading: true,
-        errored: false
-      }
-    },
-    methods: {
-        handleLogin1() {
-          console.log('网络请求1');  
-          //状态管理模式
-          this.$store.dispatch('LoginByPassword').then(data => {
-            console.log('文件名为fetch的axio请求');
-            console.log(data);
-            this.info1 = data.data;
-          })
-        },
-        handleLogin2() {
-          console.log('网络请求2');  
-          this.$ajax.get('https://api.coindesk.com/v1/bpi/currentprice.json').then(data => {
-            console.log('文件名为ajax的axio请求');
-            console.log(data);
-            this.info2 = data.data;
-          })
-        }
-    },
-    computed: {
-      classes() {
-        return [
-          `${this.prefixCls}`
-        ];
+  name: prefixCls,
+  data() {
+    return {
+      prefixCls: prefixCls,
+      info1: "",
+      info2: "",
+      loading: true,
+      errored: false
+    }
+  },
+  methods: {
+      handleLogin1() {
+        console.log('网络请求1');  
+        //状态管理模式
+        this.$store.dispatch('LoginByPassword').then(data => {
+          console.log('文件名为fetch的axio请求');
+          console.log(data);
+          this.info1 = data.data;
+        })
       },
+      handleLogin2() {
+        console.log('网络请求2');  
+        this.$ajax.get('https://api.coindesk.com/v1/bpi/currentprice.json').then(data => {
+          console.log('文件名为ajax的axio请求');
+          console.log(data);
+          this.info2 = data.data;
+        })
+      }
+  },
+  computed: {
+    classes() {
+      return [
+        `${this.prefixCls}`
+      ];
     },
+  },
 }
 </script>
 

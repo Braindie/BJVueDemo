@@ -5,7 +5,7 @@
     </template>
 
     <template slot="footer">
-      <bj-tabbar class="h-footer"></bj-tabbar>
+      <bj-tabbar :default-index="1" class="h-footer"></bj-tabbar>
     </template>
   </base-layout>
 </template>
@@ -19,6 +19,13 @@ export default {
     return {
       loading: true,
     }
+  },
+  computed: {
+    classes() {
+      return [
+        `${this.prefixCls}`
+      ];
+    },
   },
 }
 </script>
