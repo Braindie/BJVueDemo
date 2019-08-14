@@ -1,25 +1,33 @@
 <template>
-    <base-layout :class="classes">
-        <!-- 导航栏 -->
-        <template slot="header">
-            <hm-header :preventGoBack="true" title="布局" rightTitle="登录" :hasRight="true" :hasLeft="false"></hm-header>
-        </template>
+  <base-layout :class="classes">
+    <!-- 导航栏 -->
+    <template slot="header">
+        <hm-header 
+            :preventGoBack="true" 
+            title="布局" 
+            rightTitle="登录" 
+            :hasRight="true" 
+            :hasLeft="false"
+        >
+        </hm-header>
+    </template>
 
-        <template slot="main">
-            <!-- 产品列表 -->
-            <div v-for="(title, index) in titles" :key="index">
-                <!-- 父组件向子组件传值 -->
-                <mine-list-item :title='title'></mine-list-item>
-            </div>
-        </template>
+    <template slot="main">
+        <div>
+            hello
+        </div>
+        <!-- 产品列表 -->
+        <!-- <div v-for="(title, index) in titles" :key="index">
+            <mine-list-item :title='title'></mine-list-item>
+        </div> -->
+    </template>
 
-        <!-- 标签栏 -->
-        <template slot="footer">
-            <bj-tabbar :default-index="0" class="h-footer"></bj-tabbar>
-        </template>
-    </base-layout>
+    <!-- 标签栏 -->
+    <template slot="footer">
+        <bj-tabbar :default-index="0" class="h-footer"></bj-tabbar>
+    </template>
+  </base-layout>
 </template>
-  
 
 <script>
 
@@ -61,7 +69,6 @@ export default {
         padding-bottom: 85px;
         background-color: white;
     }
-
 </style>
 
 

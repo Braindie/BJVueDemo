@@ -50,7 +50,7 @@
     }
 
     > main {
-      height: calc(100% - 1px);
+      height: calc(100% - 88px);
       width: 100%;
       z-index: 1;
       overflow-y: scroll;

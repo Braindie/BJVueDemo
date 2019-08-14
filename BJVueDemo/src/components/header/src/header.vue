@@ -1,6 +1,9 @@
 <template>
   <div class="hm-header">
-    <x-header :left-options="{ backText:'', preventGoBack: preventGoBack}" @on-click-back="hanldeClickBack">
+    <x-header 
+      :left-options="{ backText:'', preventGoBack: preventGoBack}" 
+      @on-click-back="hanldeClickBack"
+    >
       <div :slot="`left`" v-if="hasLeft">
         <i class="ku-icon icon-left"></i>
       </div>

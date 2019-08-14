@@ -6,19 +6,19 @@
         <span slot="label">布局</span>
       </tabbar-item>
       <tabbar-item link="/animationPage">
-        <i slot="icon" class="ku-icon" :class="index === 2 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <i slot="icon" class="ku-icon" :class="index === 1 ? 'icon-tab_profile_select' : 'icon-tab_profile_regular'"></i>
         <span slot="label">动画</span>
       </tabbar-item>
       <tabbar-item link="/networkPage">
-        <i slot="icon" class="ku-icon" :class="index === 3 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <i slot="icon" class="ku-icon" :class="index === 2 ? 'icon-tab_mall_select' : 'icon-tab_mall_regular'"></i>
         <span slot="label">网络</span>
       </tabbar-item>
       <tabbar-item link="/framePage">
-        <i slot="icon" class="ku-icon" :class="index === 4 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <i slot="icon" class="ku-icon" :class="index === 3 ? 'icon-tab_Investment_select' : 'icon-tab_Investment_regular'"></i>
         <span slot="label">架构</span>
       </tabbar-item>
       <tabbar-item link="/minePage">
-        <i slot="icon" class="ku-icon" :class="index === 5 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
+        <i slot="icon" class="ku-icon" :class="index === 4 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
         <span slot="label">功能</span>
       </tabbar-item>
     </tabbar>
@@ -51,14 +51,9 @@ export default {
       this.index = index;
     },
   },
-  create() {
-    console.log(this.index);
-    this.index = this.defaultIndex || 0;
-  },
-  watch:{
-    $route(to,from){
-      console.log('路由变化');
-    }
+  created() {
+    this.index = this.defaultIndex;
+    console.log('created' + this.index);
   },
 }
 </script>
