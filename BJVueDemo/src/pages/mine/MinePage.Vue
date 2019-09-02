@@ -3,7 +3,11 @@
         <template slot="header">
             <hm-header :preventGoBack="true" title="功能" :hasRight=false :hasLeft=false></hm-header>
         </template>
-
+        <template slot="main">
+            <div>
+                <pagination v-model="currentPage" :total-page="totalPage"/>
+            </div>
+        </template>
         <template slot="footer">
             <bj-tabbar :default-index="4" class="h-footer"></bj-tabbar>
         </template>
@@ -11,13 +15,20 @@
 </template>
 
 <script>
+import { Pagination } from 'uiv'
+
 const prefixCls = 'bj-mine';
 
 export default {
     name: prefixCls,
+    components: {
+        Pagination
+    },
     data() {
         return {
             loading: true,
+            totalPage: 18,
+            currentPage: 1
         }
     },
   computed: {

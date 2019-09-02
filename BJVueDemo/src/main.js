@@ -21,6 +21,8 @@ import  'lib-flexible';
 
 import axios from 'axios'
 
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import * as uiv from 'uiv';
 
 
 //引入ElementUI
@@ -37,6 +39,7 @@ Vue.use(BaseLayout);
 Vue.use(Header);
 
 Vue.use(ElementUI);
+Vue.use(uiv);
 
 
 //root不在作为根组件，作为容器，加载三方组件（App.vue才是跟组件）
