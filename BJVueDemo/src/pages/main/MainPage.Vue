@@ -4,7 +4,7 @@
     <template slot="header">
         <hm-header 
             :preventGoBack="true" 
-            title="布局" 
+            title="Layout" 
             rightTitle="登录" 
             :hasRight="true" 
             :hasLeft="false"

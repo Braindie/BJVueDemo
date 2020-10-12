@@ -1,7 +1,7 @@
 <template>
   <base-layout :class="classes">
     <template slot="header">
-      <hm-header :preventGoBack="true" title="架构" :hasRight=false :hasLeft=false></hm-header>
+      <hm-header :preventGoBack="true" title="Frame" :hasRight=false :hasLeft=false></hm-header>
     </template>
 
     <template slot="footer">

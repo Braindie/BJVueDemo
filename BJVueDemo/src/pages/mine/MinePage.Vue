@@ -1,7 +1,7 @@
 <template>
     <base-layout :class="classes">
         <template slot="header">
-            <hm-header :preventGoBack="true" title="功能" :hasRight=false :hasLeft=false></hm-header>
+            <hm-header :preventGoBack="true" title="Func" :hasRight=false :hasLeft=false></hm-header>
         </template>
         <template slot="main">
           <div class="bjmine-content">

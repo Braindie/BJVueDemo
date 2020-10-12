@@ -17,7 +17,7 @@ export default new Router({
       name:'main',
       component:MainPage,
       meta:{
-        title:'布局'
+        title:'Layout'
       }
     },
     {
@@ -25,7 +25,7 @@ export default new Router({
       name:'mine',
       component:MinePage,
       meta:{
-        title:'功能'
+        title:'Func'
       }
     },
     {
@@ -33,7 +33,7 @@ export default new Router({
       name:'animation',
       component:AnimationPage,
       meta:{
-        title:'动画'
+        title:'Draw'
       }
     },
     {
@@ -41,7 +41,7 @@ export default new Router({
       name:'network',
       component:NetworkPage,
       meta:{
-        title:'网络'
+        title:'Data'
       }
     },
     {
@@ -49,7 +49,7 @@ export default new Router({
       name:'frame',
       component:FramePage,
       meta:{
-        title:'架构'
+        title:'Frame'
       }
     },
     {

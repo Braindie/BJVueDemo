@@ -3,23 +3,23 @@
     <tabbar v-model="index" @on-index-change="indexChange">
       <tabbar-item link="/">
         <i slot="icon" class="ku-icon" :class="index === 0 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
-        <span slot="label">布局</span>
+        <span slot="label">Layout</span>
       </tabbar-item>
       <tabbar-item link="/animationPage">
         <i slot="icon" class="ku-icon" :class="index === 1 ? 'icon-tab_profile_select' : 'icon-tab_profile_regular'"></i>
-        <span slot="label">动画</span>
+        <span slot="label">Draw</span>
       </tabbar-item>
       <tabbar-item link="/networkPage">
         <i slot="icon" class="ku-icon" :class="index === 2 ? 'icon-tab_mall_select' : 'icon-tab_mall_regular'"></i>
-        <span slot="label">网络</span>
+        <span slot="label">Data</span>
       </tabbar-item>
       <tabbar-item link="/framePage">
         <i slot="icon" class="ku-icon" :class="index === 3 ? 'icon-tab_Investment_select' : 'icon-tab_Investment_regular'"></i>
-        <span slot="label">架构</span>
+        <span slot="label">Frame</span>
       </tabbar-item>
       <tabbar-item link="/minePage">
         <i slot="icon" class="ku-icon" :class="index === 4 ? 'icon-tab_home_select' : 'icon-tab_home_regular'"></i>
-        <span slot="label">功能</span>
+        <span slot="label">Func</span>
       </tabbar-item>
     </tabbar>
   </div>
