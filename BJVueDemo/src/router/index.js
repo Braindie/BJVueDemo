@@ -2,10 +2,17 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const MainPage = () => import('../pages/main/MainPage.vue').then(m => m.default || m);
+const MainListPage = () => import('../pages/main/mainList/MainListPage.vue').then(m => m.default || m);
+const FlexboxPage = () => import('../pages/main/Flexbox/FlexboxPage.vue').then(m => m.default || m);
+
 const MinePage = () => import('../pages/mine/MinePage.vue').then(m => m.default || m);
+
 const AnimationPage = () => import('../pages/animation/AnimationPage.vue').then(m => m.default || m);
+
 const NetworkPage = () => import('../pages/network/NetworkPage.vue').then(m => m.default || m);
+
 const FramePage = () => import('../pages/frame/FramePage.vue').then(m => m.default || m);
+
 const Login = () => import('../pages/login/Login.vue').then(m => m.default || m);
 
 Vue.use(Router)
@@ -21,11 +28,19 @@ export default new Router({
       }
     },
     {
-      path:'/minePage',
-      name:'mine',
-      component:MinePage,
+      path:'/mineListPage',
+      name:'mainList',
+      component:MainListPage,
       meta:{
-        title:'Func'
+        title:'Layout1'
+      }
+    },
+    {
+      path:'/flexboxPage',
+      name:'flexbox',
+      component:FlexboxPage,
+      meta:{
+        title:'Layout2'
       }
     },
     {
@@ -50,6 +65,14 @@ export default new Router({
       component:FramePage,
       meta:{
         title:'Frame'
+      }
+    },
+    {
+      path:'/minePage',
+      name:'mine',
+      component:MinePage,
+      meta:{
+        title:'Func'
       }
     },
     {

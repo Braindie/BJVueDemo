@@ -3,34 +3,28 @@
     <!-- 导航栏 -->
     <template slot="header">
         <hm-header 
-            :preventGoBack="true" 
-            title="Layout" 
-            rightTitle="登录" 
-            :hasRight="true" 
-            :hasLeft="false"
+            :preventGoBack="false" 
+            title="自定义Cell"
+            :hasLeft="true"
         >
         </hm-header>
     </template>
 
     <template slot="main">
-        <!-- 列表 -->
+        <!-- 产品列表 -->
         <div v-for="(title, index) in titles" :key="index">
-            <div @click="selectCellAction(index)">
-                {{ title }}
-            </div>
+            <mine-list-item :title='title'></mine-list-item>
         </div>
     </template>
 
-    <!-- 标签栏 -->
-    <template slot="footer">
-        <bj-tabbar :default-index="0" class="h-footer"></bj-tabbar>
-    </template>
   </base-layout>
 </template>
 
 <script>
 
-const prefixCls = 'bj-main';
+import MineListItem from "./MainListItem"
+
+const prefixCls = 'bj-main-list';
 
 export default {
     name: prefixCls,
@@ -38,8 +32,11 @@ export default {
         return {
             prefixCls: prefixCls,
             input: '',
-            titles:["cell","flex"]
+            titles:["推荐","最新","最热"]
         }
+    },
+    components: {
+        MineListItem
     },
     computed: {
       classes() {
@@ -49,13 +46,8 @@ export default {
       }
     },
     methods: {
-        selectCellAction(index) {
-            console.log(index);
-            if (index === 0) {
-                this.$router.push({path:'/mineListPage'})
-            } else if (index === 1) {
-                this.$router.push({path:'/flexboxPage'})
-            }
+        onIndexChange (newIndex, oldIndex) {
+            console.log(newIndex, oldIndex)
         }
     }
 }
