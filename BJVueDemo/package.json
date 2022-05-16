@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.2",
     "bootstrap-sass": "^3.4.1",
     "element-ui": "^2.7.2",
     "lib-flexible": "^0.3.2",
