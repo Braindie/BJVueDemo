@@ -1,0 +1,121 @@
+/*! 字体 */
+$font-family:                      Montserrat,'Microsoft YaHei','Heiti SC',simhei,'Lucida Sans Unicode','Myriad Pro','Hiragino Sans GB',Verdana;
+
+/*! 字体大小 */
+$font-size-large-extra:            20px !default;
+$font-size-large:                  18px !default;
+$font-size-medium:                 16px !default;
+$font-size-small:                  14px !default;
+$font-size-small-extra:            13px !default;
+$font-size-small-extra-extra:      12px !default;
+
+
+/*! 颜色 */
+$blue:                             #20A0FF !default;
+$success:                          #13CE66 !default;
+$warning:                          #F7BA2A !default;
+$danger:                           #FF4949 !default;
+
+$brand-primary:                    #378ff6 !default; // #337ab7
+$brand-success:                    #5cb85c !default;
+$brand-info:                       #5bc0de !default;
+$brand-warning:                    #f0ad4e !default;
+$brand-danger:                     #d9534f !default;
+
+$blue-light:                       #58B7FF !default;
+$blue-dark:                        #1D8CE0 !default;
+
+$black:                            #1F2D3D !default;
+$black-light:                      #324057 !default;
+$black-extra-light:                #475669 !default;
+$silver:                           #8492A6 !default;
+$silver-light:                     #99A9BF !default;
+$silver-extra-light:               #C0CCDA !default;
+$gray:                             #D3DCE6 !default;
+$gray-light:                       #E5E9F2 !default;
+$gray-extra-light:                 #EFF2F7 !default;
+$white:                            #FFFFFF !default;
+$white-dark:                       #F9FAFC !default;
+
+$index-background:                 #f1f1f1 !default;
+
+$cursor-disabled:                  not-allowed !default;
+
+$line-height-base:                 1.428571429 !default;
+
+$border-radius-base:               4px !default;
+$border-radius-large:              6px !default;
+$border-radius-small:              3px !default;
+
+// z-index
+$z-index-back-top:                 10;
+$font-size-base:                   14px !default;
+
+$btn-border-radius-base:           $border-radius-base !default;
+$btn-border-radius-large:          $border-radius-large !default;
+$btn-border-radius-small:          $border-radius-small !default;
+
+$font-weight-light:                300 !default;
+$font-weight-normal:               400 !default;
+$font-weight-bold:                 700 !default;
+
+$btn-font-weight:                  $font-weight-normal !default;
+$border-radius-base:               4px !default;
+
+$padding-base-vertical:            6px !default;
+$padding-base-horizontal:          12px !default;
+
+$padding-base-vertical:            6px !default;
+$padding-base-horizontal:          12px !default;
+
+$padding-large-vertical:           10px !default;
+$padding-large-horizontal:         16px !default;
+
+$padding-small-vertical:           5px !default;
+$padding-small-horizontal:         10px !default;
+
+$padding-xs-vertical:              1px !default;
+$padding-xs-horizontal:            5px !default;
+
+$line-height-large:                1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-small:                1.5 !default;
+
+$border-radius-base:               4px !default;
+$border-radius-large:              6px !default;
+$border-radius-small:              3px !default;
+
+// Panels 面板
+$panel-bg:                         #fff !default;
+$panel-body-padding:               10px 28px !default;
+$panel-header-padding:             21px 28px 10px !default;
+$panel-footer-padding:             $panel-header-padding !default;
+$panel-border-radius:              $border-radius-base !default;
+
+// Button 按钮
+$btn-font-weight:                  normal !default;
+
+$btn-default-color:                #333 !default;
+$btn-default-bg:                   #fff !default;
+$btn-default-border:               #ccc !default;
+
+$btn-primary-color:                #fff !default;
+$btn-primary-bg:                   $brand-primary !default;
+$btn-primary-border:               darken($btn-primary-bg, 5%) !default;
+
+$btn-success-color:                #fff !default;
+$btn-success-bg:                   $brand-success !default;
+$btn-success-border:               darken($btn-success-bg, 5%) !default;
+
+$btn-info-color:                   #fff !default;
+$btn-info-bg:                      $brand-info !default;
+$btn-info-border:                  darken($btn-info-bg, 5%) !default;
+
+$btn-warning-color:                #fff !default;
+$btn-warning-bg:                   $brand-warning !default;
+$btn-warning-border:               darken($btn-warning-bg, 5%) !default;
+
+$btn-danger-color:                 #fff !default;
+$btn-danger-bg:                    $brand-danger !default;
+$btn-danger-border:                darken($btn-danger-bg, 5%) !default;
+
+$btn-link-disabled-color:          $gray-light !default;
